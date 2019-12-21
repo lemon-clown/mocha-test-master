@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "test util with mocha",
   "main": "lib/index.js",
-  "typings": "index.d.ts",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "build": "rimraf lib/ && tsc -b tsconfig.json",
     "postbuild": "rimraf lib/package.json lib/test && mv lib/src/* lib && rimraf lib/src/ lib/**/*.tsbuildinfo",
