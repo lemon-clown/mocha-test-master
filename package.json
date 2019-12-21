@@ -1,0 +1,63 @@
+{
+  "name": "@lemon-clown/mocha-test-master",
+  "version": "0.0.1",
+  "description": "test util with mocha",
+  "main": "lib/index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "build": "rimraf lib/ && tsc -b tsconfig.json",
+    "postbuild": "rimraf lib/package.json lib/test && mv lib/src/* lib && rimraf lib/src/ lib/**/*.tsbuildinfo",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "prepublishOnly": "yarn lint:fix && yarn build"
+  },
+  "proxy": {},
+  "author": {
+    "name": "lemon-clown",
+    "url": "https://github.com/lemon-clown/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lemon-clown/mocha-test-master"
+  },
+  "bugs": {
+    "url": "https://github.com/lemon-clown/mocha-test-master/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mocha test util"
+  ],
+  "files": [
+    "lib/",
+    ".editorconfig",
+    ".eslintrc",
+    ".eslintignore",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "peerDependencies": {
+    "chai": "^4.2.0",
+    "fs-extra": "^8.1.0",
+    "mocha": "^6.2.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/fs-extra": "^8.0.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.21",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "fs-extra": "^8.1.0",
+    "mocha": "^6.2.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  }
+}
